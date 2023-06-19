@@ -1,18 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <!--metadata: more information :styling(link to stles) -->
         <link rel="stylesheet" href="style.css" />
+        
         <title>My Website</title>
+ </head>
+    <body> 
+        <div id="header"></div>
+<div class="container">
+    <nav>
+        <img src="images/logo.jpg" class="logo">
+        <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#career">career</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="header-text">
+        <p>Software Engineer</p>
+        <h1>MERCY MWONGELI</h1>
+    </div>
+</div>
+-------------about ---------------
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1"></div> 
+                <img src="image/me.jpg">
+            </div>
+
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p>sddjhdnjkdknsmd udkdjcnmuidsjknudjjhnnj iidjkjdjd</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('Hobbies')">Hobbies</p>
+                </div>
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>Web Development</span><br>web app and site development</li>
+                        <li><span>Mobile Development</span><br>App development</li>
+                  </ul>
+                </div>
+                <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>2021May-2021-December</span><br>joined Machakos University as an attachee</li>
+                        
+                  </ul>
+                </div>
+                <div class="tab-contents" id="Hobbies">
+                    <ul>
+                        <li><span>Dancing</span></li>
+                        <li><span>Swimming</span></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--------career---------->
+<div id="career">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="career-list">
+            <div>
+                <h1>App Development</h1>
+                <p>ljsadmjwioewjdsdlksjdenaslkdjjnsmlkdua</p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+        <div>
+            <h2>wed development</h2>
+            <p>ljsadmjwioewjdsdlksjdenaslkdjjnsmlkdua</p>
+            <a href="#">learn more</a>
+        </div>
+
+    </div>
+</div>
+<!-----------------Education------------->
+<div id="Education">
+    <div class="container">
+        <h1 class="sub-title">My Education</h1>
+        <div class="years">
+            <div>
+                <h1>2019-2020</h1>
+                <p>Kenya Institute of Software Engineering</p>
+                </div>
+        </div>
+        <div>
+            <h2>2015-2018</h2>
+            <p>Mumbuni Girls' High School</p>
+            
+        </div>
+        <div>
+            <h2>2007-2014</h2>
+            <p>A.B.C Academy</p>
+            
+        </div>
+<!--------------------contact------------------->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <hi class="subtitle">Contact me</hi> 
+                <p><i class="fas fa-paper-plane"></i>mwongelimercy24@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>0741674023</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fab fa-facebook"></i></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="" class="btn btn2">Download CV</a>
+         </div>
+            <div class="contact-left">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" row="6" placeholder="Your Message"></textarea>
+                    <button type="submit"class="btn btn2">Submit</button>
+
+                </form>
+            </div>
+        </div>
+</div>
+  </div>
 
 
-    </head>
-    <body{
-        background: blue;
-      }>
+       
 
-        <h1>Hello World!</h1>
-        <footer>
+       <footer>
 
         </footer>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tablinks = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablinks.classList.remove("active-link")
+                }
+                for(tabcontent of tabcontent){
+                    tabcontent.classList.remove("active-tab")
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classlist.add("active-tab");
+            }
+
+
+
+        </script>
     </body>
 </html>
